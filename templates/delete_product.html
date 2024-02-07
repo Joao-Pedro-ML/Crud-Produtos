@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Produto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Deletar Produto</h1>
+        <form id="delete-product-form" action="{{ url_for('delete_product', id=product.id) }}" method="post">
+            <p>Tem certeza de que deseja excluir o produto "{{ product.name }}"?</p>
+            <input type="submit" value="Confirmar Exclusão" class="delete-button">
+        </form>
+    </div>
+</body>
+</html>
